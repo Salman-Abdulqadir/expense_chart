@@ -1,38 +1,87 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27, 66%, 92%);
+}
+h1{
+  font-size: 3vw;
+}
+h2{
+  font-size: 2vw;
+}
+footer {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-end;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  width: 40%;
+  min-height: 100vh;
+  margin: auto;
+}
+.balance-container {
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  align-items: center;
+}
+.balance{
+  color: hsl(33, 100%, 98%);
 }
 
-.App-link {
-  color: #61dafb;
+.balance-container,
+.info-section {
+  padding: 2rem;
+  border-radius: 10px;
+}
+.info-section {
+  background-color: hsl(33, 100%, 98%);
+}
+.info-section h2, .month-total h1, .stats h3{
+  color: hsl(25, 47%, 15%);
+}
+.chart{
+  padding: 1rem 0rem;
+  margin: 2rem 0rem;
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+}
+.summary p {
+  color: hsl(28, 10%, 53%);
+}
+.stats{
+  text-align: right;
+}
+@media  screen and (max-width:900px) {
+  .App{
+    width: 70%;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+}
+@media  screen and (max-width:550px) {
+  .App{
+    width: 90%;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

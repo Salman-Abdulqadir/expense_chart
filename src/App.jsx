@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+//importing data
+import balanceData from "./fetchData";
+
 //importing components
-import Footer from "./components/footer";
 import Balance from "./components/balance";
 import ExpenseChart from "./components/bar_chart";
 
+import Footer from "./components/footer";
+
 function App() {
+  //data and balance states
   const [data, setData] = useState(null);
   const [balance, setBalance] = useState(0);
 
+  //getting the total balance from the data provided
   const getBalance = (data) => {
     let amount = 0;
     for (let element of data) {
@@ -17,16 +23,13 @@ function App() {
     }
     setBalance(amount);
   };
-  const fetchData = async () => {
-    const data = await (await fetch("./data/data.json")).json();
-    const result = data.result;
-    console.log(result);
-    setData(result);
-    getBalance(result);
-  };
+
+  //calling the fetchData function when the page loads, and calculate the balance
   useEffect(() => {
-    fetchData();
+    setData(balanceData());
+    getBalance(balanceData());
   }, []);
+
   return (
     <div className="App">
       <Balance balance={balance} />

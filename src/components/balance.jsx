@@ -4,7 +4,7 @@ import React from "react";
 import logo from "../images/logo.svg";
 const Balance = ({balance}) => {
     return(
-        <div className="balance-container">
+        <div className="balance-container flex">
             <div className="balance">
                 <p>My Balance</p>
                 <h2 id="balance-amount">${balance}</h2>

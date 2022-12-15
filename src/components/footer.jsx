@@ -4,18 +4,9 @@ const Footer = () => {
   return (
     <footer className="attribution">
       Challenge by{" "}
-      <a
-        rel="nonreferrer"
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-      >
-        Frontend Mentor
-      </a>
-      . Coded by{" "}
-      <a rel="nonreferrer" target="_blank" href="#">
-        Salman Abdulqadir
-      </a>
-      .
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by{" "}
+      <a href="https://www.github.com/salman-abdulqadir">Salman Abdulqadir</a>.
     </footer>
   );
 };
