@@ -12,13 +12,13 @@ function App() {
 
   const getBalance = (data) => {
     let amount = 0;
-    for(let element of data){
+    for (let element of data) {
       amount += element.amount;
     }
-    setBalance(amount)
-  }
+    setBalance(amount);
+  };
   const fetchData = async () => {
-    const data = await (await fetch("./src/data.json")).json();
+    const data = await (await fetch("./data/data.json")).json();
     const result = data.result;
     console.log(result);
     setData(result);
@@ -29,8 +29,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Balance balance={balance}/>
-      <ExpenseChart/>
+      <Balance balance={balance} />
+      <ExpenseChart data={data}/>
       <Footer />
     </div>
   );
